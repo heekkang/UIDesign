@@ -7,27 +7,29 @@
 /* adjusting fonts */
 
 body {
+	color: rgb(0, 4, 255);
 	font-family: -apple-system, BlinkMacSystemFont, helvetica, arial, sans-serif;
 	transition: background 500ms ease;
 }
 
 p, li {
-	font-size:  22px;
+	font-size:  18px;
 	line-height: 30px;
 }
 
 /* adjusting spacing */
 
 #left-column {
-	padding: 20px;
+	padding: 50px;
 }
 
 h1, p {
-	margin-bottom:  20px;
+	margin-bottom:  25px;
 }
 
 ul, ol {
 	margin-left: 20px;
+	margin-block-end: 20px;
 }
 
 img {
