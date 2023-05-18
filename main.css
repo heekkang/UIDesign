@@ -1,0 +1,268 @@
+body {
+	background: #cccccc;
+}
+
+#align {
+	display: flex;
+  align-items: center;
+  justify-content: center;	
+  height: 100vh;
+}
+
+#stage {
+	width: 660px;
+	height: 670px;
+	margin: auto;
+	background:linear-gradient(0deg, rgba(60,76,166,1) 0%, rgba(240,165,249,1) 36%, rgba(255,158,20,1) 100%);
+	position: relative;
+}
+
+#rhombusR {
+	border-left: 238px solid #dbdbdb;
+	border-top: 139px solid transparent;
+	border-bottom: 100px solid transparent;
+	position: absolute;
+	top: 390px;
+	left: 368px;
+  }
+
+#rhombusL {
+	border-left: 237px solid #dbdbdb;
+    border-top: 117px solid transparent;
+    border-bottom: 110px solid transparent;
+    position: absolute;
+    top: 403px;
+    left: 132px;
+    transform: rotate(180deg);
+  }
+#square_side{
+	width: 426px;
+    height: 450px;
+    background: rgb(108, 118, 106);
+    top: 514px;
+    left: 132px;
+    position: absolute;
+	
+	
+
+}
+#square_side_1{
+	width: 426px;
+    height: 377px;
+    background: rgb(108, 118, 106);
+    top: 529px;
+    left: 180px;
+    position: absolute;
+	
+	
+
+}
+
+#triangle {
+	width: 0;
+	height: 0;
+	border-left: 0px solid transparent;
+	border-right: 41px solid transparent;
+	border-bottom: 30px solid rgb(45, 117, 54);
+	position: absolute;
+	top: 170px;
+	left: 300px;
+}
+#triangle_2 {
+	width: 0;
+	height: 0;
+	border-left: 57px solid transparent;
+	border-right: 9px solid transparent;
+	border-bottom: 30px solid rgb(45, 117, 54);
+	position: absolute;
+	top: 170px;
+	left: 340px;
+}
+
+#square {
+	width: 250px;
+	height: 55px;
+	background: rgb(127, 236, 106);
+	top: 442px;
+	left: 213px;
+	position: absolute;
+
+	/* uncomment to add keyframe animation */
+	/* animation: spin 2s infinite; */
+	
+	
+
+}
+#square_2 {
+	width: 250px;
+	height: 55px;
+	background: rgb(226, 226, 42);
+	top: 388px;
+	left: 213px;
+	position: absolute;
+
+	/* uncomment to add keyframe animation */
+	/* animation: spin 2s infinite; */
+	
+	
+
+}
+
+#square_22 {
+	width: 250px;
+	height: 17px;
+	background: rgb(205, 184, 100);
+	top: 372px;
+	left: 213px;
+	position: absolute;
+
+	/* uncomment to add keyframe animation */
+	/* animation: spin 2s infinite; */
+}
+#square_3 {
+	width: 250px;
+	height: 55px;
+	background: rgba(199, 197, 158, 0.575);
+	top: 343px;
+	left: 213px;
+	position: absolute;
+
+	/* uncomment to add keyframe animation */
+	/* animation: spin 2s infinite; */
+	
+	
+
+}
+
+#caudex {
+	width: 5px;
+	height: 220px;
+	background: rgb(20, 146, 114);
+	top: 93px;
+	left: 345px;
+	position: absolute;
+
+	/* uncomment to add keyframe animation */
+	/* animation: spin 2s infinite; */
+	
+	
+
+}
+#caudex_1 {
+	width: 5px;
+	height: 220px;
+	background: rgb(31, 171, 97);
+	top: 93px;
+	left: 343px;
+	position: absolute;
+	transform: rotate(354deg);
+
+	/* uncomment to add keyframe animation */
+	/* animation: spin 2s infinite; */
+	
+	
+
+}
+
+#apple {
+	width: 108px;
+	height: 100px;
+	background: linear-gradient(90deg, rgba(166,120,60,1) 0%, rgba(217,80,80,1) 23%, rgba(182,227,101,1) 79%, rgba(255,78,20,1) 100%);
+	border-radius: 150px;
+	top: 463px;
+	left: 209px;
+	position: absolute;
+}
+#shadow{
+    width: 25px;
+    height: 10px;
+    background: rgb(57 62 26 / 30%);
+    border-radius: -112px;
+    top: 476px;
+    left: 249px;
+    position: absolute;
+}
+#circle {
+	width: 18px;
+	height: 18px;
+	background: rgba(212, 220, 162, 0.711);
+	border-radius: 0px;
+	top: 483px;
+	left: 231px;
+	position: absolute;
+}
+
+
+#flower {
+	width: 92px;
+	height: 80px;
+	background: linear-gradient(340deg, rgba(2,0,36,1) 0%, rgba(246,105,105,1) 35%, rgba(243, 255, 167, 0.673) 100%);
+	border-radius: 150px;
+	top: 70px;
+	left: 284px;
+	position: absolute;
+}
+
+
+
+
+#pot {
+	width: 150px;
+	height: 150px;
+	background: rgb(205, 205, 228);
+	border-radius: 50px;
+	top: 363px;
+	left: 378px;
+	position: absolute;
+}
+
+#vase {
+	width: 90px;
+	height: 83px;
+	background: rgb(205, 205, 228);
+	border-radius: 130px;
+	top: 282px;
+	left: 305px;
+	position: absolute;
+}
+
+#clip {
+	width: 130px;
+	height: 130px;
+	background: green;
+	clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+	top: 203px;
+	left: 690px;
+	position: absolute;
+
+	/* uncomment for css transitions */
+	/* transition: all 400ms ease; */
+}
+
+/* animations */
+
+/*
+#clip:hover {
+	transform: rotate(1200deg);
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+@keyframes move {
+  from {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(100px);
+  }
+}
+
+*/
