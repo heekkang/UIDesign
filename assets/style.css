@@ -45,7 +45,7 @@ button{
 	padding: 0.5rem;
 	margin-bottom: 1rem;
 	border-radius: 5px;
-	border: 2px rgb(0, 4, 255);
+	border: 2px solid rgb(0, 4, 255);
 }
 
 button:hover{
