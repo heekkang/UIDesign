@@ -67,6 +67,12 @@ body.darkmode button{
 	border: 2px solid yellow;
 
 }
+
+@media only screen and (max-width: 1000px) { 
+	body {
+        background: rgb(114, 222, 141);
+    }
+}
 /* uncomment the code below to set the grid */
 
 /*#grid {
