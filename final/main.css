@@ -1,0 +1,70 @@
+a {
+  font-size: 28px;
+  top: 0;
+  right: 0;
+  left: 100%;
+  white-space: nowrap;
+  animation-duration: 3s;
+  animation-name: slidein;
+  color: antiquewhite;
+  background-color: #529c3a; /* 배경 색상 지정 */
+}
+
+ 
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+#overlay {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 9999;
+  text-align: center; /* 텍스트 입력 칸 가운데 정렬 */
+  border-left: 10px;
+}
+
+#overlay-container span {
+  display: block;
+  margin-bottom: 10px;
+  color: #6fff00; /* 텍스트 색상 지정 */
+}
+
+
+
+#overlay-container button {
+  padding: 10px 20px;
+  
+}
+
+#overlay-text {
+  pointer-events: none;
+}
+
+.overlay-container {
+  display: none;
+  position: fixed;
+  top: 35px;
+  left: 0;
+  width: 301px;
+  height: 373px;
+  background: #EEFFFE;
+  box-shadow: 0px 9px 10px 3px rgba(0, 0, 0, 0.22);
+  border-radius: 32px;
+  z-index: 999;
+}

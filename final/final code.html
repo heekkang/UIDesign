@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBaNhQzXZwM1cH3flIcqlQVBBkNHaqpD_Y&callback=initMap" async defer></script>
+    <meta charset="UTF-8">
+    <script src="map.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <title>letsplanttrees</title>
+    <style>
+
+    textarea {
+      display: block;
+      margin-top: 10px;
+      margin-bottom: 5px;
+      width: 290px;
+      height: 100px;
+      resize: none;
+      color: rgb(0, 0, 0);
+    }
+    .image-preview {
+      display: none;
+      max-width: 200px;
+      max-height: 50px;
+      margin-top: 10px;
+    }
+
+    body{
+      background-color: #529c3a; /* 배경 색상 지정 */
+      margin: 0;
+    }
+
+</style>
+</head>
+<body>
+  <a>Welcome. This is a site that shares an interesting type of tree. Have a good time.</a>
+  
+  <div id="map" style="height: 1000px;"></div>
+
+  <div class="overlay-container" style="padding: 15px;">
+    <span style="font-size: 20px;">🌳 Please write a picture of your tree and a related story.</span>
+    <textarea id="id-text" style="height: 15px;"></textarea>
+    <textarea id="password-text" style="height: 15px;"></textarea>
+
+    <div>
+      <input type="file" id="image-input" accept="image/*" style="display: none;">
+      <img id="image-preview" class="image-preview" alt="Image Preview">
+      <button id="add-image-btn" style="border-radius: 20px;margin: 5px;">image +</button>
+    </div>
+
+    <textarea id="input-text"></textarea>
+
+    <button id="submit-btn" style="border-radius: 20px; margin: 5px;">Submit</button>
+    <button id="cancel-btn" style="border-radius: 20px; margin: 5px;">Cancel</button>
+  </div>
+
+  
+  <script>
+      var cancelBtn = document.getElementById('cancel-btn');
+      cancelBtn.addEventListener('click', function() {
+          var overlayContainer = document.querySelector('.overlay-container');
+          overlayContainer.style.display = 'none';
+      });
+      var cancelBtn = document.getElementById('submit-btn');
+      cancelBtn.addEventListener('click', function() {
+          var overlayContainer = document.querySelector('.overlay-container');
+          overlayContainer.style.display = 'none';
+      });
+
+      
+  </script>
+
+ 
+</body>
+</html>
