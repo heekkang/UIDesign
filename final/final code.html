@@ -7,8 +7,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="main.css">
-    <title>letsplanttrees</title>
+    <title>TreeSharingSite</title>
     <style>
+
+#map-container {
+      position: relative;
+      height: 880px;
+      overflow: auto;
+    }
 
     textarea {
       display: block;
@@ -27,21 +33,32 @@
     }
 
     body{
-      background-color: #529c3a; /* 배경 색상 지정 */
+      background-color: #cde8c4; /* 배경 색상 지정 */
       margin: 0;
     }
+    
+    .image-container {
+  display: flex;
+  justify-content: center;
+}
+
+.image-container img {
+  margin: auto;
+}
 
 </style>
 </head>
 <body>
-  <a>Welcome. This is a site that shares an interesting type of tree. Have a good time.</a>
+  <div class="animated-text">Welcome. <br>This is a site that collects <br>interesting appearance images of trees.<br> Have a good time.</div>
   
-  <div id="map" style="height: 1000px;"></div>
+  <div id="map-container">
+  <div id="map" style="height: 880px;"></div>
 
+ 
   <div class="overlay-container" style="padding: 15px;">
-    <span style="font-size: 20px;">🌳 Please write a picture of your tree and a related story.</span>
-    <textarea id="id-text" style="height: 15px;"></textarea>
-    <textarea id="password-text" style="height: 15px;"></textarea>
+    <div style=" padding: 10px;"><span style="font-size: 20px; ">🌳 Please write a picture of your tree and a related story.</span></div>
+    <span style="font-size: 15px;">ID</span><textarea id="id-text" style="height: 15px;"></textarea>
+    <span style="font-size: 15px;">PASSWORD</span><textarea id="password-text" style="height: 15px;"></textarea>
 
     <div>
       <input type="file" id="image-input" accept="image/*" style="display: none;">
@@ -54,8 +71,34 @@
     <button id="submit-btn" style="border-radius: 20px; margin: 5px;">Submit</button>
     <button id="cancel-btn" style="border-radius: 20px; margin: 5px;">Cancel</button>
   </div>
+ 
 
+  <div class="fixed-marker-overlay-container" style="display: none; padding: 15px;">
+    <div style=" padding: 10px;"><span style="font-size: 20px;" >🌳 ghj1971</span></div>
+    
+    <div><span style="font-size:15px;">Look at this. Doesn't it look like a ballerina is posing?</span></div>
+    <div style="padding-block: 10px;"><img src="/Users/heegang/Documents/GitHub/UIDesign1/final/image/IMG_1262.jpg" width="200" height="250"> </div>
+    <button id="fixed-marker-close-btn" style="border-radius: 20px; margin: 5px;">Close</button>
+    <button id="fixed-marker-close-btn" style="border-radius: 20px; margin: 5px;">edit</button>
+  </div>
+
+  <div class="fixed-marker-overlay-container" style="display: none; padding: 15px;">
+    <div style="padding: 10px;"><span style="font-size: 20px;">🌳 Second Marker</span></div>
+    
+    <div><span style="font-size: 15px;">This is the second marker overlay.</span></div>
+    <div style="padding-block: 10px;"><img src="/path/to/second_marker_image.jpg" width="200" height="250"></div>
+    <button id="fixed-marker-close-btn" style="border-radius: 20px; margin: 5px;">Close</button>
+    <button id="fixed-marker-edit-btn" style="border-radius: 20px; margin: 5px;">Edit</button>
+  </div>
+</div>
+  <div class="image-container">
+    <img src="/Users/heegang/Documents/GitHub/UIDesign1/final/image/ending_page.png" alt="" >
   
+  </div>  
+
+
+
+
   <script>
       var cancelBtn = document.getElementById('cancel-btn');
       cancelBtn.addEventListener('click', function() {
@@ -68,8 +111,73 @@
           overlayContainer.style.display = 'none';
       });
 
+      var fixedMarkerCloseBtn = document.getElementById('fixed-marker-close-btn');
+      fixedMarkerCloseBtn.addEventListener('click', function() {
+          var fixedMarkerOverlayContainer = document.querySelector('.fixed-marker-overlay-container');
+          fixedMarkerOverlayContainer.style.display = 'none';
+      });
+
+      document.getElementById('playButton').addEventListener('click', function() {
+      var audioPlayer = document.getElementById('audioPlayer');
+      audioPlayer.play();
+    });
+
+
+    // 두 번째 마커를 클릭했을 때 오버레이 창을 나타내는 함수
+    function showSecondMarkerOverlay() {
+      var overlayContainer = document.querySelector('.fixed-marker-overlay-container');
+      overlayContainer.style.display = 'block';
+    }
+
+    // 두 번째 마커 클릭 시 오버레이 창을 나타내도록 이벤트 리스너 등록
+    var secondMarker = document.getElementById('second-marker');
+    secondMarker.addEventListener('click', showSecondMarkerOverlay);
+
+    // Close 버튼 클릭 시 오버레이 창을 닫는 함수
+    function closeOverlay() {
+      var overlayContainer = document.querySelector('.fixed-marker-overlay-container');
+      overlayContainer.style.display = 'none';
+    }
+
+    // Close 버튼 클릭 시 오버레이 창을 닫도록 이벤트 리스너 등록
+    var closeButton = document.getElementById('fixed-marker-close-btn');
+    closeButton.addEventListener('click', closeOverlay);
+
+    // Edit 버튼 클릭 시 해당 마커의 편집 기능을 수행하는 함수
+    function editMarker() {
+      // TODO: Edit 기능 구현
+    }
+
+    // Edit 버튼 클릭 시 해당 마커의 편집 기능을 수행하도록 이벤트 리스너 등록
+    var editButton = document.getElementById('fixed-marker-edit-btn');
+    editButton.addEventListener('click', editMarker);
+  
+
+   
+    var mapContainer = document.getElementById("map-container");
+    var overlayContainer = document.getElementById("overlay-container");
+    
+    window.addEventListener('scroll', function() {
+      overlayContainer.style.transform = "translateY(" + mapContainer.scrollTop + "px)";
+
+
       
+    })
+    
+
+    var mapContainer = document.getElementById("map-container");
+    var overlayContainer = document.getElementById("fixed-marker-overlay-container");
+    
+    window.addEventListener('scroll', function() {
+      overlayContainer.style.transform = "translateY(" + mapContainer.scrollTop + "px)";
+
+
+      
+    })
+
+    ;
   </script>
+ 
 
  
 </body>

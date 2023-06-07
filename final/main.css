@@ -1,23 +1,21 @@
-a {
-  font-size: 28px;
+.animated-text {
+  font-size: 74px;
   top: 0;
   right: 0;
-  left: 100%;
+  left: auto;
   white-space: nowrap;
   animation-duration: 3s;
   animation-name: slidein;
   color: antiquewhite;
   background-color: #529c3a; /* 배경 색상 지정 */
+  padding-left: 22px;
 }
-
- 
 
 @keyframes slidein {
   from {
     margin-left: 100%;
-    width: 300%
+    width: 300%;
   }
-
   to {
     margin-left: 0%;
     width: 100%;
@@ -25,10 +23,10 @@ a {
 }
 
 #overlay {
-  display: none;
-  position: absolute;
-  top: 50%;
-  left: 50%;
+  display: absolute;
+  position: fixed;
+  top: 0;
+  left: 0;
   transform: translate(-50%, -50%);
   background-color: rgba(255, 255, 255, 0.9);
   padding: 20px;
@@ -42,28 +40,38 @@ a {
 #overlay-container span {
   display: block;
   margin-bottom: 10px;
-  color: #6fff00; /* 텍스트 색상 지정 */
 }
-
-
 
 #overlay-container button {
   padding: 10px 20px;
-  
 }
 
 #overlay-text {
   pointer-events: none;
 }
 
+.fixed-marker-overlay-container {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 301px;
+  height: 400px;
+  background-color: #EEFFFE;
+  box-shadow: 0px 9px 10px 3px rgba(0, 0, 0, 0.22);
+  border-radius: 32px;
+  padding: 10px;
+  z-index: 9999;
+}
+
 .overlay-container {
   display: none;
-  position: fixed;
-  top: 35px;
-  left: 0;
+  position: absolute;
+  top: 0px;
+  left: 0px;
   width: 301px;
   height: 373px;
-  background: #EEFFFE;
+  background-color: #EEFFFE;
   box-shadow: 0px 9px 10px 3px rgba(0, 0, 0, 0.22);
   border-radius: 32px;
   z-index: 999;
