@@ -33,7 +33,7 @@
     }
 
     body{
-      background-color: #cde8c4; /* 배경 색상 지정 */
+      background-color: #ffffff; /* 배경 색상 지정 */
       margin: 0;
     }
     
@@ -82,12 +82,12 @@
     <button id="fixed-marker-close-btn" style="border-radius: 20px; margin: 5px;">edit</button>
   </div>
 
-  <div class="fixed-marker-overlay-container" style="display: none; padding: 15px;">
+  <div class="fixed-marker-overlay-container_2" style="display: none; padding: 15px;">
     <div style="padding: 10px;"><span style="font-size: 20px;">🌳 Second Marker</span></div>
     
     <div><span style="font-size: 15px;">This is the second marker overlay.</span></div>
     <div style="padding-block: 10px;"><img src="/path/to/second_marker_image.jpg" width="200" height="250"></div>
-    <button id="fixed-marker-close-btn" style="border-radius: 20px; margin: 5px;">Close</button>
+    <button id="fixed-marker-close-btn_2" style="border-radius: 20px; margin: 5px;">Close</button>
     <button id="fixed-marker-edit-btn" style="border-radius: 20px; margin: 5px;">Edit</button>
   </div>
 </div>
@@ -123,15 +123,7 @@
     });
 
 
-    // 두 번째 마커를 클릭했을 때 오버레이 창을 나타내는 함수
-    function showSecondMarkerOverlay() {
-      var overlayContainer = document.querySelector('.fixed-marker-overlay-container');
-      overlayContainer.style.display = 'block';
-    }
-
-    // 두 번째 마커 클릭 시 오버레이 창을 나타내도록 이벤트 리스너 등록
-    var secondMarker = document.getElementById('second-marker');
-    secondMarker.addEventListener('click', showSecondMarkerOverlay);
+   
 
     // Close 버튼 클릭 시 오버레이 창을 닫는 함수
     function closeOverlay() {
@@ -160,7 +152,11 @@
     window.addEventListener('scroll', function() {
       overlayContainer.style.transform = "translateY(" + mapContainer.scrollTop + "px)";
 
-
+      var closeButton = document.getElementById('fixed-marker-close-btn_2');
+closeButton.addEventListener('click', function() {
+  var fixedMarkerOverlayContainer = document.querySelector('.fixed-marker-overlay-container_2');
+  fixedMarkerOverlayContainer.style.display = 'none';
+});
       
     })
     
