@@ -234,209 +234,79 @@ function initMap() {
 
   map = new google.maps.Map(document.getElementById('map'), mapOptions);
 
-  function showOverlay(clickLocation) {
-    var overlayContainer = document.querySelector('.overlay-container');
-    overlayContainer.style.display = 'block';
   
-    var submitBtn = document.getElementById('submit-btn');
-    submitBtn.addEventListener('click', function() {
-      var textarea = document.getElementById('input-text');
-      var inputValue = textarea.value;
-      var overlayText = document.getElementById('overlay-text');
-  
-      if (inputValue !== '') {
-        overlayText.textContent = inputValue;
-        previousInputValue = inputValue;
-        textarea.readOnly = true;
-  
-        if (newMarker) {
-          newMarker.setMap(null); // 기존의 newMarker 삭제
-        }
-  
-        newMarker = new google.maps.Marker({
-          position: clickLocation,
-          map: map,
-          icon: {
-            url: "image/newMark.png",
-            scaledSize: new google.maps.Size(55, 55)
-          },
-          title: 'New Marker'
-        });
-  
-        newMarker.addListener('click', function() {
-          selectedMarker = newMarker;
-          showOverlay(newMarker.getPosition());
-        });
-  
-        markers.push(newMarker);
-        overlayContainer.style.display = 'none';
-      }
-    });
-  
-    var cancelBtn = document.getElementById('cancel-btn');
-    cancelBtn.addEventListener('click', function() {
-      overlayContainer.style.display = 'none';
-    });
-  }
-  
-  map.addListener('click', function(event) {
-    var overlayContainer = document.querySelector('.overlay-container');
-    overlayContainer.style.display = 'block';
-  
-    var submitBtn = document.getElementById('submit-btn');
-    submitBtn.addEventListener('click', function() {
-      var textarea = document.getElementById('input-text');
-      var inputValue = textarea.value;
-  
-      if (inputValue !== '') {
-        handleMapClick(event);
-      }
-  
-      overlayContainer.style.display = 'none';
-    });
-  
-    var cancelBtn = document.getElementById('cancel-btn');
-    cancelBtn.addEventListener('click', function() {
-      overlayContainer.style.display = 'none';
-    });
-  });
-  
-  function handleMapClick(event) {
-    var clickLocation = {
-      lat: event.latLng.lat(),
-      lng: event.latLng.lng()
-    };
 
-    var location = selectedMarker ? selectedMarker.getPosition() : clickLocation;
-
-    var newMarker = new google.maps.Marker({
+  function fixMarker(location, overlayContent, markerIcon, overlayContainerClass) {
+    var fixedMarker = new google.maps.Marker({
       position: location,
       map: map,
       icon: {
-        url: "image/newMark.png",
-        scaledSize: new google.maps.Size(48, 48)
+        url: markerIcon,
+        scaledSize: new google.maps.Size(55, 55)
       },
-      title: 'New Marker'
+      title: 'Fixed Marker'  // 개별적인 타이틀 설정
     });
-
-    newMarker.addListener('click', function() {
-      selectedMarker = newMarker;
-      showOverlay(newMarker.getPosition());
-    });
-
-    markers.push(newMarker);
-  }
-
-  map.addListener('click', function(event) {
-    var overlayContainer = document.querySelector('.overlay-container');
-    overlayContainer.style.display = 'block';
-
-    var submitBtn = document.getElementById('submit-btn');
-    submitBtn.addEventListener('click', function() {
-      var textarea = document.getElementById('input-text');
-      var inputValue = textarea.value;
-
-      if (inputValue !== '') {
-        handleMapClick(event);
-      }
-
-      overlayContainer.style.display = 'none';
-    });
-
-    var cancelBtn = document.getElementById('cancel-btn');
-    cancelBtn.addEventListener('click', function() {
-      overlayContainer.style.display = 'none';
-    });s
-  });
-
- 
-  function fixMarker() {
-    var locations = [
-      { lat: 37.459882, lng: 126.951905 },
-      { lat: 37.477365, lng: 126.948622},
-      { lat: 37.475265, lng: 126.948422}
-      
-      // 추가로 원하는 위치 정보를 배열에 추가
-    ];
-
-    for (var i = 0; i < locations.length; i++) {
-      var location = locations[i];
-
-      var fixedMarker = new google.maps.Marker({
-        position: location,
-        map: map,
-        icon: {
-          url: "image/newMark_1.png",
-          scaledSize: new google.maps.Size(55, 55)
-        },
-        title: 'Fixed Marker '  // 개별적인 타이틀 설정
-      });
-
-      fixedMarkers.push(fixedMarker);
-
-      fixedMarker.addListener('click', function() {
-        showFixedMarkerOverlay(this); // 클릭한 fixedMarker를 전달하여 오버레이 표시
-      });
-    }
-  }
-
-  function handleMarkerClick(marker) {
-    selectedMarker = marker;
-    showOverlay(marker.getPosition());
-  }
-
-  if (userMarker) {
-    userMarker.addListener('click', function() {
-      handleMarkerClick(userMarker);
+  
+    fixedMarker.addListener('click', function() {
+      showFixedMarkerOverlay(this, overlayContent, overlayContainerClass); // 클릭한 fixedMarker와 overlay 내용 및 컨테이너 클래스 전달
     });
   }
-
-  var fixedMarkers = [];
-
-
-function showFixedMarkerOverlay(marker) {
-  var fixedMarkerOverlayContainer = document.querySelector('.fixed-marker-overlay-container');
-  fixedMarkerOverlayContainer.style.display = 'block'; // 오버레이를 표시하기 위해 display 속성 설정
-
-  var fixedMarkerCloseBtn = document.getElementById('fixed-marker-close-btn');
-  fixedMarkerCloseBtn.addEventListener('click', function() {
-    fixedMarkerOverlayContainer.style.display = 'none'; // 오버레이 닫기 버튼 클릭 시 오버레이 숨김
-  });
-
-  var fixedMarkerContent = document.getElementById('fixed-marker-content');
-  fixedMarkerContent.textContent = marker.title; // 개별적인 내용 표시
-}
-
-
-
+  
+  function showFixedMarkerOverlay(marker, overlayContent, overlayContainerClass) {
+    var fixedMarkerOverlayContainer = document.querySelector('.' + overlayContainerClass);
+    fixedMarkerOverlayContainer.style.display = 'block'; // 오버레이를 표시하기 위해 display 속성 설정
+  
+    var fixedMarkerContent = fixedMarkerOverlayContainer.querySelector('.fixed-marker-content');
+    fixedMarkerContent.textContent = overlayContent; // 개별적인 내용 표시
+  }
+  
+  function openOverlay(overlayContainerClass) {
+    var fixedMarkerOverlayContainer = document.querySelector('.' + overlayContainerClass);
+    fixedMarkerOverlayContainer.style.display = 'block';
+  }
+  
+  function closeOverlay(overlayContainerClass) {
+    var fixedMarkerOverlayContainer = document.querySelector('.' + overlayContainerClass);
+    fixedMarkerOverlayContainer.style.display = 'none';
+  }
+  
+  // 예시로 두 개의 마커와 각각의 오버레이 내용 및 이미지를 추가하는 경우
+  var location1 = { lat: 37.459882, lng: 126.951905 };
+  var location2 =  { lat: 37.477365, lng: 126.948622 };
+  
+  var overlayContent1 = '오버레이 내용 1';
+  var overlayContent2 = '오버레이 내용 2';
+  
+  var markerIcon1 = 'image/newmark_1.png';
+  var markerIcon2 = 'image/newmark_2.png';
+  
+  fixMarker(location1, overlayContent1, markerIcon1, 'fixed-marker-overlay-container');
+  fixMarker(location2, overlayContent2, markerIcon2, 'fixed-marker-overlay-container_1');
+  
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(function(position) {
       var userLocation = {
         lat: position.coords.latitude,
         lng: position.coords.longitude
       };
-
+  
       map.setCenter(userLocation);
-
+  
       userMarker = new google.maps.Marker({
         position: userLocation,
         map: map,
-        icon: {
-          url: "image/marker.png",
-          scaledSize: new google.maps.Size(60, 80)
-        },
         title: '내 위치'
       });
-
+  
       if (selectedMarker === null) {
         selectedMarker = userMarker;
       }
-
+  
       userMarker.addListener('click', function() {
         handleMarkerClick(userMarker);
       });
-
-      fixMarker();
+  
+      fixMarker(userLocation, '내 위치', 'image/user_marker.png', 'fixed-marker-overlay-container_2');
     }, function() {
       // 위치 정보를 얻지 못하는 경우의 처리
       // 에러 처리 등을 여기에 추가할 수 있습니다.
@@ -445,31 +315,7 @@ function showFixedMarkerOverlay(marker) {
     // 브라우저가 위치 정보를 지원하지 않는 경우의 처리
     // 에러 처리 등을 여기에 추가할 수 있습니다.
   }
-
-  fixMarker();
-
-  if (fixedMarker) {
-    fixedMarker.addListener('click', function() {
-      showFixedMarkerOverlay();
-    });
-  }
-
-
   
-  
-function showFixedMarkerOverlay(marker) {
-  var fixedMarkerOverlayContainer = document.querySelector('.fixed-marker-overlay-container');
-  fixedMarkerOverlayContainer.style.display = 'block'; // 오버레이를 표시하기 위해 display 속성 설정
-
-  var fixedMarkerCloseBtn = document.getElementById('fixed-marker-close-btn');
-  fixedMarkerCloseBtn.addEventListener('click', function() {
-    fixedMarkerOverlayContainer.style.display = 'none'; // 오버레이 닫기 버튼 클릭 시 오버레이 숨김
-  });
-
-  var fixedMarkerContent = document.getElementById('fixed-marker-content');
-  fixedMarkerContent.textContent = marker.title; // 개별적인 내용 표시
-}
 
 }
-
 

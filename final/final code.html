@@ -46,6 +46,8 @@
   margin: auto;
 }
 
+
+
 </style>
 </head>
 <body>
@@ -74,28 +76,42 @@
  
 
   <div class="fixed-marker-overlay-container" style="display: none; padding: 15px;">
-    <div style=" padding: 10px;"><span style="font-size: 20px;" >🌳 ghj1971</span></div>
+    <div style=" padding: 10px;"><span style="font-size: 20px;" >🌳Heekyung</span></div>
     
     <div><span style="font-size:15px;">Look at this. Doesn't it look like a ballerina is posing?</span></div>
-    <div style="padding-block: 10px;"><img src="/Users/heegang/Documents/GitHub/UIDesign1/final/image/IMG_1262.jpg" width="200" height="250"> </div>
+    <div style="padding-block: 10px;"><img src="image/IMG_1262.jpg" width="200" height="250"> </div>
     <button id="fixed-marker-close-btn" style="border-radius: 20px; margin: 5px;">Close</button>
-    <button id="fixed-marker-close-btn" style="border-radius: 20px; margin: 5px;">edit</button>
+ 
   </div>
 
-  <div class="fixed-marker-overlay-container_2" style="display: none; padding: 15px;">
-    <div style="padding: 10px;"><span style="font-size: 20px;">🌳 Second Marker</span></div>
+
+
+  <div class="fixed-marker-overlay-container_1" style="display: none; padding: 15px;">
+    <div style="padding: 10px;"><span style="font-size: 20px;">🌳Heekyung</span></div>
     
-    <div><span style="font-size: 15px;">This is the second marker overlay.</span></div>
-    <div style="padding-block: 10px;"><img src="/path/to/second_marker_image.jpg" width="200" height="250"></div>
-    <button id="fixed-marker-close-btn_2" style="border-radius: 20px; margin: 5px;">Close</button>
-    <button id="fixed-marker-edit-btn" style="border-radius: 20px; margin: 5px;">Edit</button>
+    <div><span style="font-size: 15px;">Do you know what this is? It's baby persimmon!</span></div>
+    <div style="padding-block: 10px;"><img src="image/IMG_1446.png" width="200" height="250"></div>
+    <button id="fixed-marker-close-btn_1" style="border-radius: 20px; margin: 5px;">Close</button>
+   
   </div>
 </div>
   <div class="image-container">
-    <img src="/Users/heegang/Documents/GitHub/UIDesign1/final/image/ending_page.png" alt="" >
-  
-  </div>  
+    <img src="image/ending_page.png" alt="" >
 
+   
+
+
+  </div>  
+  <div style="text-align: center;"><button onclick="composeEmail()" style="
+      display: inline-block;
+      color: #ffffff;
+      top:50%;
+      background-color:#0a0a23;
+      padding:15px;
+      border:none;
+      border-radius:10px;
+      box-shadow: 0px 0px 2px 2px rgb(0,0,0);
+      margin-bottom: 400px ;">Send Email</button></div>
 
 
 
@@ -111,9 +127,18 @@
           overlayContainer.style.display = 'none';
       });
 
+
+
+
       var fixedMarkerCloseBtn = document.getElementById('fixed-marker-close-btn');
       fixedMarkerCloseBtn.addEventListener('click', function() {
           var fixedMarkerOverlayContainer = document.querySelector('.fixed-marker-overlay-container');
+          fixedMarkerOverlayContainer.style.display = 'none';
+      });
+
+      var fixedMarkerCloseBtn = document.getElementById('fixed-marker-close-btn_1');
+      fixedMarkerCloseBtn.addEventListener('click', function() {
+          var fixedMarkerOverlayContainer = document.querySelector('.fixed-marker-overlay-container_1');
           fixedMarkerOverlayContainer.style.display = 'none';
       });
 
@@ -124,7 +149,6 @@
 
 
    
-
     // Close 버튼 클릭 시 오버레이 창을 닫는 함수
     function closeOverlay() {
       var overlayContainer = document.querySelector('.fixed-marker-overlay-container');
@@ -135,15 +159,17 @@
     var closeButton = document.getElementById('fixed-marker-close-btn');
     closeButton.addEventListener('click', closeOverlay);
 
-    // Edit 버튼 클릭 시 해당 마커의 편집 기능을 수행하는 함수
-    function editMarker() {
-      // TODO: Edit 기능 구현
+    // Close 버튼 클릭 시 오버레이 창을 닫는 함수
+    function closeOverlay() {
+      var overlayContainer = document.querySelector('.fixed-marker-overlay-container_1');
+      overlayContainer.style.display = 'none';
     }
 
-    // Edit 버튼 클릭 시 해당 마커의 편집 기능을 수행하도록 이벤트 리스너 등록
-    var editButton = document.getElementById('fixed-marker-edit-btn');
-    editButton.addEventListener('click', editMarker);
-  
+    // Close 버튼 클릭 시 오버레이 창을 닫도록 이벤트 리스너 등록
+    var closeButton = document.getElementById('fixed-marker-close-btn_2');
+    closeButton.addEventListener('click', closeOverlay);
+
+
 
    
     var mapContainer = document.getElementById("map-container");
@@ -172,6 +198,20 @@ closeButton.addEventListener('click', function() {
     })
 
     ;
+
+  
+    function composeEmail() {
+      var email = {
+        to: 'ghj1971@snu.ac.kr',
+        subject: 'TreeSharingSite',
+        body: '*Please attach your nickname, Google map coordinates, photos, and text to the mail.'
+      };
+
+      var mailtoLink = 'mailto:' + email.to + '?subject=' + encodeURIComponent(email.subject) + '&body=' + encodeURIComponent(email.body);
+
+      window.location.href = mailtoLink;
+    }
+  </script>
   </script>
  
 
