@@ -1,0 +1,88 @@
+body {
+    display: flex;
+    
+    background-color: white;
+    font-family: 'Roboto Mono', monospace;
+  }
+  .widget{
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    border: 1px solid black;
+    border-radius: 50%;
+    background-color:white;
+    height:40px;
+    width: 40px;
+  }
+  
+  .wrapper {
+    flex-direction: left;
+    margin: 0;
+  }
+  
+  .intro {
+    padding: 5px 10px 10px 10px;
+    position: fixed;
+  }
+  
+  .title {
+    color: black;
+    font-size: 18px;
+    text-align: left;
+    line-height: 105%;
+    margin: 0;
+  }
+  
+  .instructions {
+    font-size: 12px;
+    width: 15vw;
+    line-height: 140%;
+  }
+  
+  .portfolio {
+    position: absolute;
+    width: 80vw;
+    right: 0px;
+  }
+  
+  .line {
+    border-top: 1px solid #444444;
+    margin: 1px 0px;
+  }
+  
+  .explanation {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding-bottom:3px;
+  }
+  
+  
+  .til,
+  .ing {
+    font-size: 12px;
+    text-align: left;
+    padding: 5px;
+    box-sizing: border-box;
+    line-height: 105%;
+    
+  }
+  
+  
+  
+  img {
+    max-width:100%;
+    max-height: 100vh;
+  }
+  
+  .col_two{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+  
+  
+  .mark{
+    background-color:pink;
+    }
+  
