@@ -47,7 +47,7 @@ body {
   
   .line {
     border-top: 1px solid orange;
-    margin: 1px 0px;
+    margin: 3px 0px;
   }
   
   .explanation {
@@ -93,4 +93,5 @@ body {
     background-color:none;
     height:40px;
     width: 40px;
+    cursor: pointer;
   }
