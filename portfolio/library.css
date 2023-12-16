@@ -20,7 +20,7 @@ body {
     flex-direction: left;
     width: 100vw;
     margin: 0;
-    padding: 20px;
+    padding: 5px 20px;
   }
   
   
@@ -29,7 +29,8 @@ body {
     font-size: 18px;
     text-align: left;
     line-height: 105%;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
+    position: relative;
   }
   
 
@@ -64,4 +65,22 @@ body {
 .category{
 
   margin:0;
+}
+
+#talkDiv {
+  width: 15%;
+  height: 8%;
+  padding: 12px;
+  left: 30px;
+  bottom: 30px;  
+  color: white;
+  background-color: rgb(255, 126, 35);
+  position: absolute;
+  font-size: 14px;
+}
+
+
+#container{
+
+  color: black;
 }
