@@ -15,4 +15,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+  const images = ['img/서대문1_독립.png', 'img/이미지.png']; // 이미지 경로 배열
+  let currentImage = 0; // 현재 이미지 인덱스
 
+  function changeImage() {
+    const image = document.getElementById('orange');
+    currentImage = (currentImage + 1) % images.length; // 다음 이미지 인덱스 계산
+    image.src = images[currentImage]; // 다음 이미지로 변경
+  }
