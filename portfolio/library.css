@@ -1,0 +1,69 @@
+body {
+    display: flex;
+    
+    background-color: white;
+    font-family: 'Roboto Mono', monospace;
+
+  }
+  .widget{
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    border: 1px solid black;
+    border-radius: 50%;
+    background-color:white;
+    height:40px;
+    width: 40px;
+  }
+  
+  .wrapper {
+    flex-direction: left;
+    width: 100vw;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  
+  .title {
+    color: black;
+    font-size: 18px;
+    text-align: left;
+    line-height: 105%;
+    
+  }
+  
+
+  .line {
+    border-top: 1px solid orange;
+    margin: 15px 0px;
+  }
+
+
+  
+  .col_two{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+  
+  
+  
+  
+    .button{
+      position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background-color:none;
+    height:40px;
+    width: 40px;
+    cursor: pointer;
+  }
+
+a{
+  font-family: 'Gothic A1', sans-serif;
+}
+
+.category{
+
+  margin:0;
+}
