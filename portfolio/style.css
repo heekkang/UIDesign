@@ -16,10 +16,6 @@ body {
     
   }
   
-  .work{
-    padding: 5px;
-  }
-
   .wrapper {
     flex-direction: left;
     margin: 0;
@@ -53,7 +49,7 @@ body {
   
   .line {
     border-top: 1px solid orange;
-    margin: 7px 0px;
+    margin: 3px 0px;
   }
   
   .explanation {
@@ -79,27 +75,20 @@ body {
   img {
     max-width:50%;
     max-height: 100vh;
-    float: left
-    
   }
 
   video {
     max-width:50%;
     max-height: 100vh;
-    float: left
-   
   }
   
 .clickable-image{
-  max-width:50%;
-  max-height: 100vh;
   cursor: pointer;
-  float: left
 }
 
   .col_two{
     width: 100%;
-    flex-direction: left;
+    display: flex;
     
   }
   
