@@ -29,7 +29,7 @@ body {
     font-size: 18px;
     text-align: left;
     line-height: 105%;
-    
+    margin-bottom: 100px;
   }
   
 
@@ -59,9 +59,7 @@ body {
     cursor: pointer;
   }
 
-a{
-  font-family: 'Gothic A1', sans-serif;
-}
+
 
 .category{
 
