@@ -67,7 +67,7 @@ body {
   margin:0;
 }
 
-#talkDiv {
+#talkDiv{
   width: 15%;
   height: 8%;
   padding: 12px;
@@ -79,8 +79,3 @@ body {
   font-size: 14px;
 }
 
-
-#container{
-
-  color: black;
-}
