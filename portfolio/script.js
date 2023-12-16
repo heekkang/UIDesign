@@ -23,3 +23,12 @@ document.addEventListener('DOMContentLoaded', function() {
     currentImage = (currentImage + 1) % images.length; // 다음 이미지 인덱스 계산
     image.src = images[currentImage]; // 다음 이미지로 변경
   }
+
+  const images2 = ['img/대지 1 사본.png', 'img/대지 1.png']; // 이미지 경로 배열
+  let currentImage2 = 0; // 현재 이미지 인덱스
+
+  function changeImage2() {
+    const image2 = document.getElementById('blue');
+    currentImage2 = (currentImage2 + 1) % images2.length; // 다음 이미지 인덱스 계산
+   
+  }
