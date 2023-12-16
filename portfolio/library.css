@@ -19,8 +19,11 @@ body {
   .wrapper {
     flex-direction: left;
     width: 100vw;
+    height: 100hw;
     margin: 0;
     padding: 5px 20px;
+    position: relative;
+
   }
   
   
@@ -30,7 +33,6 @@ body {
     text-align: left;
     line-height: 105%;
     margin-bottom: 50px;
-    position: relative;
   }
   
 
@@ -50,8 +52,8 @@ body {
   
   
   
-    .button{
-      position: fixed;
+  .button{
+    position: fixed;
     right: 20px;
     bottom: 20px;
     background-color:none;
@@ -69,13 +71,14 @@ body {
 
 #talkDiv{
   width: 15%;
-  height: 8%;
+  height: 20%;
   padding: 12px;
-  left: 30px;
-  bottom: 30px;  
   color: white;
   background-color: rgb(255, 126, 35);
   position: absolute;
-  font-size: 14px;
+  font-size: 12px;
+  cursor: grab;
+  left:0;
+  top:0;
 }
 
