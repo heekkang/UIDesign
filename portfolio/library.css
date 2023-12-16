@@ -77,8 +77,7 @@ body {
   background-color: rgb(255, 126, 35);
   position: absolute;
   font-size: 12px;
-  cursor: grab;
-  left:0;
+  left:70%;
   top:0;
 }
 
