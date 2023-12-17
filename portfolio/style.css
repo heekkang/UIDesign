@@ -108,9 +108,11 @@ body {
     cursor: pointer;
   }
 
-  .modal-trigger{
-    cursor: pointer;
-  }
+.modal-trigger{
+
+  cursor: pointer;
+}
+
 
   .modal {
     display: none;
@@ -126,10 +128,17 @@ body {
   .modal-content {
     position: relative;
     display: block;
-    height: 90vh;
     margin: 0 auto;
     width: auto;
-    
+    height: 90vh;
     
   }
   
+  .close {
+    color: #fff;
+    font-size: 2em;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    cursor: pointer;
+  }
