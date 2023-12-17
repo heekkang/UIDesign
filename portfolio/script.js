@@ -15,20 +15,32 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-  const images = ['img/서대문1_독립.png', 'img/이미지.png']; // 이미지 경로 배열
-  let currentImage = 0; // 현재 이미지 인덱스
 
-  function changeImage() {
-    const image = document.getElementById('orange');
-    currentImage = (currentImage + 1) % images.length; // 다음 이미지 인덱스 계산
-    image.src = images[currentImage]; // 다음 이미지로 변경
-  }
 
-  const images2 = ['img/대지 1 사본.png', 'img/대지 1.png']; // 이미지 경로 배열
-  let currentImage2 = 0; // 현재 이미지 인덱스
 
-  function changeImage2() {
-    const image2 = document.getElementById('blue');
-    currentImage2 = (currentImage2 + 1) % images2.length; // 다음 이미지 인덱스 계산
-   
-  }
+  document.addEventListener('DOMContentLoaded', function () {
+    // 이미지 클릭 시 모달 열기
+    var modalTriggers = document.querySelectorAll('.modal-trigger');
+    var modal = document.querySelector('.modal');
+    var modalImage = modal.querySelector('.modal-content');
+    var modalClose = modal.querySelector('.close');
+
+    modalTriggers.forEach(function(trigger) {
+      trigger.addEventListener('click', function () {
+        modal.style.display = 'block';
+        modalImage.src = trigger.src;
+      });
+    });
+
+    // 모달 닫기
+    modalClose.addEventListener('click', function () {
+      modal.style.display = 'none';
+    });
+
+    // 모달 외부 클릭 시 닫기
+    window.addEventListener('click', function (event) {
+      if (event.target == modal) {
+        modal.style.display = 'none';
+      }
+    });
+  });

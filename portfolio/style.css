@@ -107,3 +107,29 @@ body {
     width: 40px;
     cursor: pointer;
   }
+
+  .modal-trigger{
+    cursor: pointer;
+  }
+
+  .modal {
+    display: none;
+    position: fixed;
+    top:50%;
+    left: 50%;
+    transform:translate(-50%,-50%); /* translate(x축,y축) */
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.7);
+  }
+  
+  .modal-content {
+    position: relative;
+    display: block;
+    height: 90vh;
+    margin: 0 auto;
+    width: auto;
+    
+    
+  }
+  
