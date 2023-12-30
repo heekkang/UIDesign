@@ -145,10 +145,10 @@ body {
   }
   
   .close {
-    color: #fff;
+    color:yellow;
     font-size: 2em;
-    position: absolute;
-    top: 15px;
-    right: 20px;
+    position: fixed;
+    top: 10px;
+    right: 15px;
     cursor: pointer;
   }
