@@ -81,7 +81,6 @@ body {
   video {
     max-width:50%;
     max-height: 100vh;
-    
   }
   
 .clickable-image{
@@ -89,6 +88,12 @@ body {
 }
 
   .col_two{
+    width: 100%;
+    display: flex;
+    
+  }
+  
+  .col_one{
     width: 100%;
     display: flex;
     
