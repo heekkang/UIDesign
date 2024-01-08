@@ -85,11 +85,10 @@ body {
   border: 1px solid rgb(255, 126, 35);
   padding: 10px 10px 7px 10px ;
   color: black;
-  width: 250px;
-  height: 40px;
+  width: 290px;
   font-size: 12px;
   position: absolute;
-  top: 0px;
+  top: 11px;
   left: 10%;
   opacity: 0;
   transition: opacity 0.3s ease, max-height 0.3s ease; /* ease 효과 추가 */
