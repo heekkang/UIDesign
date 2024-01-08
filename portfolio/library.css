@@ -74,10 +74,29 @@ body {
   height: 20%;
   padding: 12px;
   color: white;
-  background-color: rgb(255, 126, 35);
+  
   position: absolute;
-  font-size: 12px;
+
   left:70%;
   top:0;
+}
+
+.explain{
+  border: 1px solid rgb(255, 126, 35);
+  padding: 10px 10px 7px 10px ;
+  color: black;
+  width: 250px;
+  height: 40px;
+  font-size: 12px;
+  position: absolute;
+  top: 0px;
+  left: 10%;
+  opacity: 0;
+  transition: opacity 0.3s ease, max-height 0.3s ease; /* ease 효과 추가 */
+}
+
+.title:hover + .explain {
+  opacity: 1;
+  
 }
 
