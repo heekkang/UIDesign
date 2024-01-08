@@ -54,9 +54,10 @@ body {
   
   .explanation {
     width: 100%;
+    padding-bottom:3px;
+    display: flex;
     display: grid;
     grid-template-columns: 50% 50%;
-    padding-bottom:3px;
   }
   
   
@@ -73,13 +74,13 @@ body {
   
   
   img {
-    max-width:49.5%;
+    max-width:99.5%;
     max-height: 100vh;
     margin: 0.2%;
   }
 
   video {
-    max-width:50%;
+    max-width:99.5%;
     max-height: 100vh;
   }
   
@@ -90,7 +91,8 @@ body {
   .col_two{
     width: 100%;
     display: flex;
-    
+    display: grid;
+    grid-template-columns: 50% 50%;
   }
   
   .col_one{
@@ -115,7 +117,6 @@ body {
   }
 
 .modal-trigger{
-
   cursor: pointer;
 }
 
