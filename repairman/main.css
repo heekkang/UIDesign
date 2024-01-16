@@ -18,6 +18,7 @@ body {
     width: 95%;
     height: 120vh;
     box-sizing: border-box;
+    position: relative;
     margin: 0 auto;
     background-image: url("img_repairman/대지 1.png");
     background-size: cover;
