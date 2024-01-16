@@ -6,11 +6,12 @@ body {
     font-size: 1.5em;
     overflow-x: auto; /* 가로 스크롤 가능하도록 설정 */
     overflow-y: hidden; /* 세로 스크롤 막기 */
+
   }
   .overlay {
     top: 0px;
     height: 100vh;
-    width: auto;
+    width: 2000px;
     background-color: white;
   }
   .overlay-content {
