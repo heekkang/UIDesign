@@ -3,7 +3,7 @@ body {
     padding: 0;
     font-family: "Sunflower", sans-serif;
     font-weight: 300;
-    font-size: 2em;
+    font-size: 1.5em;
     overflow-x: auto; /* 가로 스크롤 가능하도록 설정 */
     overflow-y: hidden; /* 세로 스크롤 막기 */
   }
@@ -18,12 +18,12 @@ body {
   }
   
   .overlay-content1 {
-    margin: 2vw;
+    margin: 2%;
     width: 2500px;
   }
   
   .row-box {
-    width: 46vw;
+    width: 46%;
     margin: 3vw;
   }
   
@@ -56,33 +56,5 @@ body {
     width: 80px; /* 원하는 너비로 설정 */
     height: 80px; /* 원하는 높이로 설정 */
     padding: 1px; /* 내부 여백을 통해 크기를 더욱 키웁니다. */
-  }
-  
-
-  .biggest{
-    font-weight: 500;
-    font-size: 3em;
-    line-height: 1.7em;
-    background-color: #ffee71;
-    
-  }
-  
-  .big {
-    font-weight: 500;
-    font-size: 2.4em;
-    line-height: 1.5em;
-    
-  }
-  
-  p {
-   font-size: 2.4em;
-    line-height: 1.6em;
-   
-    
-  }
-  
-  .mark {
-    font-weight: 500;
-     background-color: #ffee71;
   }
   
