@@ -15,7 +15,7 @@ body {
   }
 
   .box {
-    width: 90vw;
+    width: 80%;
     height: 120vh;
     box-sizing: border-box;
     margin: 0 auto;
@@ -128,12 +128,13 @@ body {
 
   .five {
     width: auto;
-    height: 10em;
+    height: 16em;
     position: absolute;
     left: 80%;
     top: 80%;
   }
-  
+  /*선형*/
+
   .six {
     width: auto;
     height: 10em;

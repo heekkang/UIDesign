@@ -98,3 +98,17 @@ document.addEventListener('DOMContentLoaded', function () {
     // 이미지에 클릭 이벤트 리스너 추가
     myImage5.addEventListener('click', openNewPage);
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+    // 이미지 요소 가져오기
+    var myImage6 = document.getElementById('clock');
+
+    // 이미지를 클릭했을 때 실행될 함수
+    function openNewPage() {
+        // 새로운 HTML 파일 열기
+        window.location.href = 'heekyungClock.html';
+    }
+
+    // 이미지에 클릭 이벤트 리스너 추가
+    myImage6.addEventListener('click', openNewPage);
+});
