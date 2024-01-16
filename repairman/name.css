@@ -31,7 +31,7 @@ body {
   }
   
   .row-box-work {
-    width: 38vw;
+    width: 30vw;
     margin: 2vw;
     font-weight: 500;
   }
@@ -53,7 +53,7 @@ body {
     margin: 4px 2px;
     border-radius: 4px;
     position: fixed;
-    right: 100px;
+    right: 50px;
     
     
   
