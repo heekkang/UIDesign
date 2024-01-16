@@ -120,7 +120,7 @@ body {
     width: auto;
     height: 15em;
     position: absolute;
-    left: 20%;
+    left: 30%;
     top: 35%;
   }
   /* 재현 */
@@ -139,19 +139,20 @@ body {
     height: 10em;
     position: absolute;
     left: 20%;
-    top: 90%;
+    bottom: 8%;
   }
+  /* 서연 */
   
   .center {
     width: auto;
-    height: 17em;
+    height: 15em;
     position: absolute;
-    left: 55%;
+    left: 50%;
     top: 50%;
   }
   
   .que {
-    font-size: 10em;
+    font-size: 8em;
     position: absolute;
     left: 40%;
     top: 65%;
