@@ -3,10 +3,12 @@ body {
     padding: 0;
     font-family: "Sunflower", sans-serif;
     font-weight: 300;
-    font-size: 1.7em;
+    font-size: 2em;
+    line-height: 1em;
     overflow-x: auto; /* 가로 스크롤 가능하도록 설정 */
     overflow-y: hidden; /* 세로 스크롤 막기 */
     width: 2000px;
+    height: 100hv;
     background: linear-gradient(0deg, rgba(255,238,113,1) 0%, rgba(255,255,255,1) 29%, rgba(255,255,255,1) 72%, rgba(255,238,113,1) 100%);
 
   }
