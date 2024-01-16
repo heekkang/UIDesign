@@ -4,7 +4,7 @@ body {
     font-family: "Sunflower", sans-serif;
     font-weight: 300;
     font-size: 2em;
-    line-height: 1em;
+    line-height: 1.5em;
     overflow-x: auto; /* 가로 스크롤 가능하도록 설정 */
     overflow-y: hidden; /* 세로 스크롤 막기 */
     width: 2000px;
