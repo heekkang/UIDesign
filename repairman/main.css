@@ -16,7 +16,7 @@ body {
 
   .box {
     width: 95%;
-    height: 1200px;
+    height: 1320px;
     box-sizing: border-box;
     margin: 0 auto;
     background-image: url("img_repairman/대지 1.png");
@@ -130,6 +130,8 @@ body {
     left: 19%;
     top: 10%;
   }
+ /* 희경 약 시계 */
+
   
   .four {
     width: auto;
