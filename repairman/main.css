@@ -16,7 +16,7 @@ body {
 
   .box {
     width: 95%;
-    height: 120vh;
+    height: 100vh;
     box-sizing: border-box;
     position: relative;
     margin: 0 auto;
