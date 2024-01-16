@@ -33,7 +33,7 @@ body {
     padding: 40px 0px;
   }
   
-  /* 시작 화면에 쓰는 것들 */
+  
   
   .title {
     color: black;
@@ -51,6 +51,8 @@ body {
     font-weight: 300;
     width: 50%;
   }
+
+  /* 시작 화면에 쓰는 것들 */
   
   .content_introduction {
     font-size: 2em;
@@ -96,7 +98,11 @@ body {
   }
   
  
-  
+   /* 이미지이미지이미지이미지이미지이미지이미지이미지이미지이미지이미지이미지
+   
+   
+   
+   */
   
   
   .number {
@@ -110,10 +116,10 @@ body {
     width: auto;
     height: 10em;
     position: absolute;
-    left: 85%;
+    left: 80%;
     top: 15%;
   }
-  /* 희경 */
+  /* 희경 사진 */
   
   .two {
     width: auto;
