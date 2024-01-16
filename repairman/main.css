@@ -1,0 +1,200 @@
+body {
+    width: auto;
+    background-color: white;
+    color: black;
+    justify-content: space-between;
+    font-family: "Sunflower", sans-serif;
+    font-weight: 300;
+  }
+  
+  .container {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 60px;
+  }
+
+  .box {
+    width: 95%;
+    height: 1200px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    background-image: url("img_repairman/대지 1.png");
+    background-size: cover;
+    filter: drop-shadow(0 0 0.75rem black);
+  }
+
+  .content {
+    position: relative;
+    display: flex;
+    margin: 0 auto;
+    position: relative;
+    width: 90%;
+    padding: 40px 0px;
+  }
+  
+  /* 시작 화면에 쓰는 것들 */
+  
+  .title {
+    color: black;
+    font-size: 50px;
+    font-weight: 500;
+    width: 50%;
+  }
+  
+  .introduction {
+    font-size: 2em;
+    line-height: 1.5em;
+    box-sizing: border-box;
+    text-align: left;
+    justify-content: center;
+    font-weight: 300;
+    width: 50%;
+  }
+  
+  .content_introduction {
+    font-size: 2em;
+    line-height: 1.5em;
+    box-sizing: border-box;
+    text-align: left;
+    justify-content: center;
+    font-weight: 300;
+  }
+  
+  .Exhibition {
+    font-weight: 500;
+    width: 90%;
+    font-size: 2.1em;
+    line-height: 2.1em;
+  }
+  
+  .biggest{
+    font-weight: 500;
+    font-size: 3em;
+    line-height: 1.7em;
+    background-color: #ffee71;
+    
+  }
+  
+  .big {
+    font-weight: 500;
+    font-size: 2.4em;
+    line-height: 1.5em;
+    
+  }
+  
+  p {
+   font-size: 2.4em;
+    line-height: 1.6em;
+   
+    
+  }
+  
+  .mark {
+    font-weight: 500;
+     background-color: #ffee71;
+  }
+  
+ 
+  
+  
+  
+  .number {
+    filter: drop-shadow(0 0 0.75rem black);
+    cursor: pointer;
+    position: absolute;
+    transform: translate(-50%, -50%);
+  }
+  
+  .one {
+    width: auto;
+    height: 10em;
+    position: absolute;
+    left: 85%;
+    top: 15%;
+  }
+  /* 희경 */
+  
+  .two {
+    width: auto;
+    height: 10em;
+    position: absolute;
+    right: 20%;
+    top: 30%;
+  }
+  
+  .three {
+    width: auto;
+    height: 10em;
+    position: absolute;
+    left: 19%;
+    top: 10%;
+  }
+  
+  .four {
+    width: auto;
+    height: 15em;
+    position: absolute;
+    left: 20%;
+    top: 35%;
+  }
+  /* 재현 */
+
+
+  .five {
+    width: auto;
+    height: 10em;
+    position: absolute;
+    left: 80%;
+    top: 80%;
+  }
+  
+  .six {
+    width: auto;
+    height: 10em;
+    position: absolute;
+    left: 20%;
+    top: 90%;
+  }
+  
+  .center {
+    width: auto;
+    height: 17em;
+    position: absolute;
+    left: 55%;
+    top: 50%;
+  }
+  
+  .que {
+    font-size: 10em;
+    position: absolute;
+    left: 40%;
+    top: 65%;
+  }
+  
+  img{
+
+    height: 100px;
+    width: auto;
+  }
+
+
+  .close-btn {
+    color: black;
+    background-color: white;
+    border: none;
+    padding: 8px 16px;
+    text-align: center;
+    display: inline-block;
+    font-size: 4em;
+  
+    margin: 4px 2px;
+    border-radius: 4px;
+    position: absolute;
+    right: 5%;
+  
+    width: 80px; /* 원하는 너비로 설정 */
+    height: 80px; /* 원하는 높이로 설정 */
+    padding: 1px; /* 내부 여백을 통해 크기를 더욱 키웁니다. */
+  }
+  

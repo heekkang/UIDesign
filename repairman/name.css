@@ -1,0 +1,57 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Sunflower", sans-serif;
+    font-weight: 300;
+  }
+  .overlay {
+    top: 0px;
+    height: 100vh;
+    width: auto;
+    background-color: white;
+  }
+  .overlay-content {
+    margin: 5%;
+  }
+  
+  .overlay-content1 {
+    margin: 2vw;
+    width: 2500px;
+  }
+  
+  .row-box {
+    width: 46vw;
+    margin: 3vw;
+  }
+  
+  .row-box-work {
+    width: 38vw;
+    margin: 2vw;
+    font-weight: 500;
+  }
+  
+  .name {
+    font-weight: 500;
+    font-size: 3em;
+    line-height: 1.7em;
+  }
+  
+  .close-btn {
+    color: black;
+    background-color: white;
+    border: none;
+    padding: 8px 16px;
+    text-align: center;
+    display: inline-block;
+    font-size: 4em;
+  
+    margin: 4px 2px;
+    border-radius: 4px;
+    position: absolute;
+    right: 5%;
+  
+    width: 80px; /* 원하는 너비로 설정 */
+    height: 80px; /* 원하는 높이로 설정 */
+    padding: 1px; /* 내부 여백을 통해 크기를 더욱 키웁니다. */
+  }
+  
