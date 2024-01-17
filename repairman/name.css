@@ -24,7 +24,7 @@ body {
   
   .overlay-content1 {
     margin: 2%;
-    width: 2500px;
+    width: 3000px;
   }
   
   .row-box {
@@ -57,7 +57,7 @@ body {
     
     
   
-    width: 80px; /* 원하는 너비로 설정 */
+    width: 50px; /* 원하는 너비로 설정 */
     height: 80px; /* 원하는 높이로 설정 */
     padding: 1px; /* 내부 여백을 통해 크기를 더욱 키웁니다. */
   }
