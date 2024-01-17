@@ -48,7 +48,7 @@ body {
     display: grid;
     grid-template-columns: 50% 50%;
     
-    text-shadow: 0 0 3px #aaa;
+ 
   }
   
   
@@ -96,10 +96,6 @@ body {
   transition: opacity 0.3s ease, max-height 0.3s ease; /* ease 효과 추가 */
 }
 
-.title:hover + .explain {
-  opacity: 1;
-  
-}
 
 
 .col_two:hover a{
