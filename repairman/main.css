@@ -90,16 +90,16 @@ body {
   
   .one {
     width: auto;
-    height: 10em;
+    height: 8em;
     position: absolute;
-    left: 70%;
-    top: 15%;
+    left: 17%;
+    bottom: 8%;
   }
   /* 희경 사진 */
   
   .two {
     width: auto;
-    height: 13em;
+    height: 10em;
     position: absolute;
     right: 20%;
     top: 30%;
@@ -111,7 +111,7 @@ body {
     width: auto;
     height: 12em;
     position: absolute;
-    left: 19%;
+    right: 10%;
     top: 15%;
   }
  /* 희경 약 시계 */
@@ -121,8 +121,8 @@ body {
     width: auto;
     height: 15em;
     position: absolute;
-    left: 30%;
-    top: 35%;
+    left: 19%;
+    top: 15%;
   }
   /* 재현 */
 
@@ -131,8 +131,8 @@ body {
     width: auto;
     height: 16em;
     position: absolute;
-    left: 80%;
-    top: 80%;
+    left: 20%;
+    top: 60%;
   }
   /*선형*/
 
@@ -140,10 +140,19 @@ body {
     width: auto;
     height: 10em;
     position: absolute;
-    left: 20%;
-    bottom: 8%;
+    left: 10%;
+    bottom: 5%;
   }
   /* 서연 */
+
+  .seven{
+    width: auto;
+    height: 15em;
+    position: absolute;
+    right: 5%;
+    bottom: 2%;
+  }
+  /* 수현 */
   
   .center {
     width: auto;
@@ -171,18 +180,20 @@ body {
     color: black;
     border: none;
     padding: 8px 16px;
+    text-align: center;
     display: inline-block;
-    font-size: 4em;
-  
     margin: 4px 2px;
     border-radius: 4px;
-    position: absolute;
+    position: fixed;
     right: 50px;
+    
+    
   
-    width: 80px; /* 원하는 너비로 설정 */
+    width: 50px; /* 원하는 너비로 설정 */
     height: 80px; /* 원하는 높이로 설정 */
     padding: 1px; /* 내부 여백을 통해 크기를 더욱 키웁니다. */
   }
+  
   
 
 
