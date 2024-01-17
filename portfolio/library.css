@@ -47,6 +47,8 @@ body {
     width: 100%;
     display: grid;
     grid-template-columns: 50% 50%;
+    
+    text-shadow: 0 0 3px #aaa;
   }
   
   
@@ -99,3 +101,20 @@ body {
   
 }
 
+
+.col_two:hover a{
+  color: black;
+  text-shadow: 0 0 3px #aaa;
+}
+
+
+
+
+a:link {
+  text-decoration: none; /* 링크에 밑줄 제거 */
+}
+
+a{
+  color: solid rgb(255, 126, 35);
+
+}
