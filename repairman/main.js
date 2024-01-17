@@ -126,3 +126,17 @@ document.addEventListener('DOMContentLoaded', function () {
     // 이미지에 클릭 이벤트 리스너 추가
     myImage7.addEventListener('click', openNewPage);
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+    // 이미지 요소 가져오기
+    var myImage8 = document.getElementById('soohyun');
+
+    // 이미지를 클릭했을 때 실행될 함수
+    function openNewPage() {
+        // 새로운 HTML 파일 열기
+        window.location.href = 'soohyun.html';
+    }
+
+    // 이미지에 클릭 이벤트 리스너 추가
+    myImage8.addEventListener('click', openNewPage);
+});
