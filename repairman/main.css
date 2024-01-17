@@ -165,8 +165,8 @@ body {
   .que {
     font-size: 8em;
     position: absolute;
-    left: 40%;
-    top: 65%;
+    right: 40%;
+    top: 50%;
   }
   
   img{
