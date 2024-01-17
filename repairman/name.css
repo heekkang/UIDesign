@@ -19,7 +19,7 @@ body {
     background-color: white;
   }
   .overlay-content {
-    margin: 5%;
+    margin: 2%;
   }
   
   .overlay-content1 {
@@ -50,8 +50,6 @@ body {
     padding: 8px 16px;
     text-align: center;
     display: inline-block;
-    font-size: 4em;
-    mix-blend-mode: luminosity;
     margin: 4px 2px;
     border-radius: 4px;
     position: fixed;
