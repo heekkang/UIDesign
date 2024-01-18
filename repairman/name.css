@@ -10,6 +10,7 @@ body {
     height: 100hv;
     background: linear-gradient(0deg, rgba(255,238,113,1) 0%, rgba(255,255,255,1) 29%, rgba(255,255,255,1) 72%, rgba(255,238,113,1) 100%);
     background-attachment: fixed;
+    word-break : break-all;
   }
   .overlay {
     top: 0px;
@@ -66,3 +67,4 @@ body {
 img{
   width: 200px;
 }
+

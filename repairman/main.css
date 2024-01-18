@@ -5,6 +5,7 @@ body {
     justify-content: space-between;
     font-family: "Sunflower", sans-serif;
     font-weight: 300;
+    word-break : break-all;
   }
   
   .container {
