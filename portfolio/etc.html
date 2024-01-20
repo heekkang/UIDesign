@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="etc.css" />
+    <script src="library.js"></script>
+
+    <title>Heekyung Yoon</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gothic+A1&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="/img/icon.png" />
+    <link rel="apple-touch-icon" href="/img/icon.png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@300;400&family=Roboto+Mono:ital,wght@0,200;0,300;0,600;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+
+
+  </head>
+  <script>
+
+function openModal(clickedDiv) {
+    var imageUrl = window.getComputedStyle(clickedDiv).getPropertyValue('background-image').slice(5, -2);
+    document.getElementById('myModal').style.display = 'flex';
+    document.getElementById('myModal').style.backgroundImage = 'url(' + imageUrl + ')';
+  }
+
+  function closeModal() {
+    document.getElementById('myModal').style.display = 'none';
+  }
+  
+  </script>
+
+  <body>
+    <h1 class="title"><mark>ETC</mark></h1>
+    <div class="explain">
+      포트폴리오에 포함되지 않지만, 공유하고 싶은 작업들. 일종의 '기타' 모음집.
+    </div>
+
+    <div class="wrapper">
+        <div class="clickable-div" style="background-image: url(img/책가도_ver.1.png);" onclick="openModal(this)"></div>
+<div class="clickable-div" style="background-image: url(img/책가도_ver.2.png);" onclick="openModal(this)"></div>
+<div class="clickable-div" style="background-image: url(img/책가도_ver.1.png);" onclick="openModal(this)"></div>
+<div class="clickable-div" style="background-image: url(img/책가도_ver.2.png);" onclick="openModal(this)"></div>
+
+    </div>
+    <div class="widget">
+      <div style="margin: 9px auto; text-align: center; font-size: 20px">⍥</div>
+    </div>
+    <div class="button"></div>
+
+
+    <div class="modal" id="myModal">
+        <div class="modal-content">
+          <!-- Modal Content Goes Here -->
+         
+          <button class="close" onclick="closeModal()">X</button>
+        </div>
+      </div>
+  </body>
+</html>

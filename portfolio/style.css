@@ -3,22 +3,17 @@ body {
     
     background-color: white;
     font-family: 'Roboto Mono', monospace;
-  }
-  .widget{
-    position: fixed;
-    right: 20px;
-    bottom: 20px;
-    border: 1px solid black;
-    border-radius: 50%;
-    background-color:white;
-    height:40px;
-    width: 40px;
     
-  }
+}
+
+  
+  
+
   
   .wrapper {
     flex-direction: left;
     margin: 0;
+    
     
   }
   
@@ -106,10 +101,45 @@ body {
     background-color:pink;
     }
 
+    .widget{
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      border: 1px solid black;
+      border-radius: 50%;
+      background-color:white;
+      height:40px;
+      width: 40px;
+      
+    }
+  
+    .widget1{
+      position: fixed;
+      right: 20px;
+      bottom: 70px;
+      border: 1px solid black;
+      border-radius: 50%;
+      background-color:white;
+      height:40px;
+      width: 40px;
+      
+    }
+
+
  .button{
     position: fixed;
     right: 20px;
     bottom: 20px;
+    background-color:none;
+    height:40px;
+    width: 40px;
+    cursor: pointer;
+  }
+
+  .button1{
+    position: fixed;
+    right: 20px;
+    bottom: 70px;
     background-color:none;
     height:40px;
     width: 40px;

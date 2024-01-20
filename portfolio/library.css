@@ -64,6 +64,16 @@ body {
     cursor: pointer;
   }
 
+  .button1{
+    position: fixed;
+    right: 20px;
+    bottom: 60px;
+    background-color:none;
+    height:40px;
+    width: 40px;
+    cursor: pointer;
+  }
+
 
 
 .category{
