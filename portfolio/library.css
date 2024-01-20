@@ -64,15 +64,7 @@ body {
     cursor: pointer;
   }
 
-  .button1{
-    position: fixed;
-    right: 20px;
-    bottom: 60px;
-    background-color:none;
-    height:40px;
-    width: 40px;
-    cursor: pointer;
-  }
+
 
 
 
@@ -99,7 +91,7 @@ body {
   color: black;
   width: 290px;
   font-size: 12px;
-  position: absolute;
+  position: fixed;
   top: 11px;
   left: 10%;
   opacity: 0;
